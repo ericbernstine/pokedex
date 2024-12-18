@@ -1,0 +1,16 @@
+header h1{
+  text-align: center;
+}
+
+
+.container{
+  display:  flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .pokemon{
+  height: 300px;
+  width: 300px;
+  background-color: #7c7c7c;
+}
