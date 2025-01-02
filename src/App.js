@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import TypeOption from './Components/TypeOption';
+import Pokemon from './Components/Pokemon';
 import './App.css';
 
 function App() {
@@ -45,11 +46,9 @@ function App() {
 
       </div>
 
-      <div className='container md:mx-auto'>
-        <div className='pokemon'>
+      <Pokemon/>
 
-        </div>
-      </div>
+      
 
     </div>
   );
