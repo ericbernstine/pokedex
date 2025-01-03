@@ -61,6 +61,13 @@ label{
   padding: 10px;
 }
 
+.imageType img{
+  margin: 5px auto;
+  width: 50%;
+  height: auto;
+  max-width: 50%;
+}
+
 .imageType h1{
   text-align: center;
 }

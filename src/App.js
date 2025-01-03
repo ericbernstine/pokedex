@@ -1,6 +1,6 @@
-import logo from './logo.svg';
 import TypeOption from './Components/TypeOption';
 import Pokemon from './Components/Pokemon';
+import pokedex from './pokedex.json';
 import './App.css';
 
 function App() {
@@ -19,36 +19,45 @@ function App() {
           <input type="text" placeholder="Search" className="w-48 md:w-52 lg:w-80" />
         </div>
 
-  
+
         <div className='flex justify-center flex-wrap gap-3 w-3/4 sm:w-1/2 mt-4 ml-auto mr-auto'>
 
-          <TypeOption type='Fire'/>
-          <TypeOption type='Water'/>
-          <TypeOption type='Grass'/>
-          <TypeOption type='Electric'/>
-          <TypeOption type='Psychic'/>
-          <TypeOption type='Ice'/>
-          <TypeOption type='Dragon'/>
-          <TypeOption type='Dark'/>
-          <TypeOption type='Fairy'/>
-          <TypeOption type='Normal'/>
-          <TypeOption type='Fighting'/>
-          <TypeOption type='Flying'/>
-          <TypeOption type='Poison'/>
-          <TypeOption type='Ground'/>
-          <TypeOption type='Rock'/>
-          <TypeOption type='Bug'/>
-          <TypeOption type='Ghost'/>
-          <TypeOption type='Steel'/>
+          <TypeOption type='Fire' />
+          <TypeOption type='Water' />
+          <TypeOption type='Grass' />
+          <TypeOption type='Electric' />
+          <TypeOption type='Psychic' />
+          <TypeOption type='Ice' />
+          <TypeOption type='Dragon' />
+          <TypeOption type='Dark' />
+          <TypeOption type='Fairy' />
+          <TypeOption type='Normal' />
+          <TypeOption type='Fighting' />
+          <TypeOption type='Flying' />
+          <TypeOption type='Poison' />
+          <TypeOption type='Ground' />
+          <TypeOption type='Rock' />
+          <TypeOption type='Bug' />
+          <TypeOption type='Ghost' />
+          <TypeOption type='Steel' />
 
 
         </div>
 
       </div>
-
-      <Pokemon/>
-
-      
+      {pokedex.map((pokemon) => {
+        console.log(`${pokemon.id} hp = ${pokemon.base.HP}`)
+        return (
+          <Pokemon
+            name={pokemon.name.english}
+            img={pokemon.image.hires || pokemon.image.thumbnail}
+            num={pokemon.id}
+            weight={pokemon.profile.weight}
+            height={pokemon.profile.height}
+            hp={pokemon.base.HP}
+          />
+        )
+      })}
 
     </div>
   );
