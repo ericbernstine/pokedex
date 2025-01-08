@@ -3,6 +3,7 @@ import Pokemon from './Components/Pokemon';
 import pokedex from './pokedex.json';
 import './App.css';
 
+
 function App() {
   return (
     <div>
@@ -55,6 +56,11 @@ function App() {
             weight={pokemon.profile.weight}
             height={pokemon.profile.height}
             hp={pokemon.base.HP}
+            attack={pokemon.base.Attack}
+            defense={pokemon.base.Defense}
+            sAttack={pokemon.base['Sp. Attack']}
+            sDefense={pokemon.base['Sp. Defense']}
+            speed={pokemon.base.Speed}
           />
         )
       })}
