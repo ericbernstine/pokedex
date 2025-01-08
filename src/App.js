@@ -52,6 +52,7 @@ function App() {
           <Pokemon
             name={pokemon.name.english}
             img={pokemon.image.hires || pokemon.image.thumbnail}
+            type={pokemon.type}
             num={pokemon.id}
             weight={pokemon.profile.weight}
             height={pokemon.profile.height}
