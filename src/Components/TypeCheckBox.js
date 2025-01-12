@@ -1,4 +1,4 @@
-const TypeOption = ({ type }) => {
+const TypeCheckBox = ({ type }) => {
     return (
         <div>
             <input type='checkbox' name={type} className=''>
@@ -8,4 +8,4 @@ const TypeOption = ({ type }) => {
     )
 }
 
-export default TypeOption
+export default TypeCheckBox
