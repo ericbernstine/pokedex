@@ -77,3 +77,9 @@ label{
   border-radius: 15px !important;
   padding: 10px;
 }
+
+.compImg{
+  margin: 4px auto;
+  height: 2rem;
+  width: auto;
+}

@@ -16,14 +16,15 @@ import poison from '../Images/Types/poison.png'
 import psychic from '../Images/Types/psychic.png'
 import rock from '../Images/Types/rock.png'
 import steel from '../Images/Types/steel.png'
+import '../App.css';
 
 
 
-const PokeType = ({ typeArr }) => {
+const PokeType = ({ typeArr, styles }) => {
     return (
         <div>
             {typeArr.map((type) => {
-                return <img key={type} src={getImgUrl(type)} alt={type} />;
+                return <img className={styles || ""} key={type} src={getImgUrl(type)} alt={type}/>;
             })}
         </div>
     );
