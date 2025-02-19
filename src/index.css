@@ -78,8 +78,44 @@ label{
   padding: 10px;
 }
 
+
 .compImg{
   margin: 4px auto;
   height: 2rem;
   width: auto;
+}
+
+.dropdownImgs{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.weakTitle{
+  border-radius: 5px;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.weakTitle:hover{
+  background-color: #eee;
+  transition: 0.5s ease-in;
+}
+
+.weakContent{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 20rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in;
+}
+
+.weakContent img {
+  width: 5rem; /* Set a fixed width (adjust as needed) */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain; 
+  flex-shrink: 0; 
 }

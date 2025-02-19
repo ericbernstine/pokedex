@@ -20,11 +20,11 @@ import '../App.css';
 
 
 
-const PokeType = ({ typeArr, styles }) => {
+const PokeType = ({ typeArr, styles, divStyles }) => {
     return (
-        <div>
+        <div className={divStyles || ''}>
             {typeArr.map((type) => {
-                return <img className={styles || ""} key={type} src={getImgUrl(type)} alt={type}/>;
+                return <img className={styles || ''} key={type} src={getImgUrl(type)} alt={type}/>;
             })}
         </div>
     );

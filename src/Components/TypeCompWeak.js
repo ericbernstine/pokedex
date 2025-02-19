@@ -21,7 +21,7 @@ const TypeCompWeak = ({typeArr}) => {
         }
     });
     
-    return <PokeType typeArr={finalOutput} styles={'compImg'}/>
+    return <PokeType typeArr={finalOutput} styles={'compImg'} divStyles={'dropdownImgs'}/>
   };
 
   export default TypeCompWeak

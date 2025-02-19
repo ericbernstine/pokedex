@@ -20,7 +20,7 @@ const TypeCompStrong = ({typeArr}) => {
         finalOutput.push(item);
     }
     });
-    return <PokeType typeArr={finalOutput} styles={'compImg'}/>
+    return <PokeType typeArr={finalOutput} styles={'compImg'} divStyles={'dropdownImgs'}/>
   };
 
   export default TypeCompStrong
