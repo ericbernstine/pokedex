@@ -90,20 +90,25 @@ label{
   flex-wrap: wrap;
 }
 
-.weakTitle{
+.weakTitle, .strongTitle{
+  background-color: rgb(237, 237, 237, 0.8);
   border-radius: 5px;
-  width: fit-content;
   display: flex;
+  width: fit-content;
   align-items: center;
   cursor: pointer;
+  margin: 5px auto;
+  padding: 4px;
 }
 
-.weakTitle:hover{
-  background-color: #eee;
+
+.weakTitle:hover, .strongTitle:hover{
+  background-color: #d6d6d6;
   transition: 0.5s ease-in;
 }
 
-.weakContent{
+
+.weakContent, .strongContent{
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
@@ -113,9 +118,41 @@ label{
   transition: max-height 0.5s ease-in;
 }
 
-.weakContent img {
-  width: 5rem; /* Set a fixed width (adjust as needed) */
+
+.weakContent img, .strongContent img {
+  width: 7rem; /* Set a fixed width (adjust as needed) */
   height: auto; /* Maintain aspect ratio */
   object-fit: contain; 
   flex-shrink: 0; 
+}
+
+.weakTitle img, .strongTitle img{
+  opacity: 0.8;
+  width: 1.6rem;
+  height: auto;
+}
+
+@keyframes flipArrow {
+  from {
+    transform: rotate(0)
+    
+  } to {
+    transform: rotate(180deg)
+  }
+}
+
+@keyframes flipArrowBack {
+  from {
+    transform: rotate(180deg)
+  } to {
+    transform: rotate(0deg);
+  }
+}
+
+.flip{
+  animation: flipArrow 1s ease forwards;
+}
+
+.flipBack{
+  animation: flipArrowBack 1s ease forwards;
 }
