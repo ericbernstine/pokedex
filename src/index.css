@@ -156,3 +156,41 @@ label{
 .flipBack{
   animation: flipArrowBack 1s ease forwards;
 }
+
+.helpIcon, .exitIcon{
+  background-color: #d6d6d6;
+  padding: 5px 14px;
+  border-radius: 5px;
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  cursor: pointer;
+}
+.helpIcon:hover, .exitIcon:hover{
+  transform: scale(1.05);
+  transition: 0.25s ease-in-out;
+  background-color: #c2c2c2;
+}
+
+
+.active{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  position: absolute;
+  z-index: 100;
+}
+.inactive{
+  display: none;
+}
+
+.infoBox{
+  padding: 2rem;
+  border-radius: 15px;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  max-width: 85%;
+}

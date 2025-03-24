@@ -1,5 +1,6 @@
 import TypeCheckBox from './Components/TypeCheckBox';
 import Pokemon from './Components/Pokemon';
+import HelpBox from './Components/HelpBox';
 import pokedex from './pokedex.json';
 import './App.css';
 
@@ -7,7 +8,8 @@ import './App.css';
 function App() {
   return (
     <div>
-
+    
+      <HelpBox></HelpBox>
       <header>
         <h1 className='text-3xl font-bold'>Pokedex App</h1>
       </header>
