@@ -28,9 +28,17 @@ header h1{
 }
 
 .pokeContainer{
+  display: flex;
   margin: 10px auto;
-  
+  gap: 5px;
+  width: fit-content;
 }
+
+.mainTypeImg{
+  width: 1rem !important;
+  height: auto;
+}
+
 
 .search{
   display: flex;
@@ -55,17 +63,18 @@ label{
 }
 
 
+/* MAIN POKEMON CONTAINER SECTION */
 .imageType{
   background-color: #eee;
   border-radius: 15px !important;
-  padding: 10px;
+  padding: 25px;
+  width: fit-content;
 }
 
-.imageType img{
+.mainImg{
   margin: 5px auto;
-  width: 50%;
-  height: auto;
-  max-width: 50%;
+  height: 10rem;
+  width: auto;
 }
 
 .imageType h1{
@@ -76,8 +85,8 @@ label{
   background-color: #b0d9e5;
   border-radius: 15px !important;
   padding: 10px;
+  width: fit-content;
 }
-
 
 .compImg{
   margin: 4px auto;
@@ -94,11 +103,12 @@ label{
   background-color: rgb(237, 237, 237, 0.8);
   border-radius: 5px;
   display: flex;
-  width: fit-content;
-  align-items: center;
+  width: 98%;
+  text-align: center;
   cursor: pointer;
   margin: 5px auto;
   padding: 4px;
+  justify-content: center;
 }
 
 
@@ -157,6 +167,48 @@ label{
   animation: flipArrowBack 1s ease forwards;
 }
 
+
+/* @media screen and (max-width: 800px){
+  .pokeContainer{
+    display: flex;
+    flex-direction: column;
+  }  
+} */
+
+@media screen and (max-width:700px){
+  .weakContent, .strongContent{
+    width: 8rem;
+  }
+  .weakTitle img, .strongTitle img{
+    height: 2rem;
+    width: auto;
+  }
+  .weakTitle, .strongTitle{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px){
+  .mainImg{
+    margin: 5px auto;
+    height: 5rem;
+    width: auto;
+  }
+
+  .weakTitle img, .strongTitle img{
+    margin: auto 0px;
+    height: 1rem;
+    width: auto;
+  }
+}
+
+@media screen and (max-width:360px){
+  .stats{
+    width: min-content;
+  }
+}
+
+
 .helpIcon, .exitIcon{
   background-color: #d6d6d6;
   padding: 5px 14px;
@@ -171,7 +223,6 @@ label{
   transition: 0.25s ease-in-out;
   background-color: #c2c2c2;
 }
-
 
 .active{
   display: flex;
@@ -194,3 +245,4 @@ label{
   color: #ffffff;
   max-width: 85%;
 }
+

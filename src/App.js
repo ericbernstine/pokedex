@@ -24,7 +24,6 @@ function App() {
 
 
         <div className='flex justify-center flex-wrap gap-3 w-3/4 sm:w-1/2 mt-4 ml-auto mr-auto'>
-
           <TypeCheckBox type='Fire' />
           <TypeCheckBox type='Water' />
           <TypeCheckBox type='Grass' />
@@ -43,8 +42,6 @@ function App() {
           <TypeCheckBox type='Bug' />
           <TypeCheckBox type='Ghost' />
           <TypeCheckBox type='Steel' />
-
-
         </div>
 
       </div>

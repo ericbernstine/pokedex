@@ -48,14 +48,14 @@ const Pokemon = ({ name, img, type, num, weight, height, hp, attack, defense, sA
     }
 
     return (
-        <div className='pokeContainer flex justify-center gap-3 w-9/12 sm:w-3/4 rounded-sm'>
+        <div className='pokeContainer'>
             <div className='imageType'>
-                <img src={img}
+                <img className='mainImg' src={img}
                     alt='Pokemon'
                 />
                 <h1 className='text-2xl font-bold'>{name}</h1>
-                <p>Type: <PokeType typeArr={type}/> </p>
-                <p>Num: #{num}</p>
+                <p>Type: <PokeType typeArr={type} styles={'compImg'}/> </p>
+                <p>Dex Num: #{num}</p>
             </div>
             <div className='stats'>
                 <p>Weight: {weight}</p>
@@ -69,7 +69,7 @@ const Pokemon = ({ name, img, type, num, weight, height, hp, attack, defense, sA
 
                     {/* AVOID DROP DOWN */}
                     <div className='weakTitle' onClick={() => dropContent('weak')}>
-                        <h3>Avoid these types </h3>
+                        <h3>Avoid these types: </h3>
                         <img ref={weakArw} src={upArw}/>
                     </div>
                     <div ref={weakRef} className='weakContent'>
